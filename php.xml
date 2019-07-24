@@ -7,7 +7,12 @@
   </component>
   <component name="PhpInterpreters">
     <interpreters>
-      <interpreter id="df1ce4cc-8540-457c-84b2-e39fd29d0290" name="PHP" home="/usr/local/bin/php" debugger_id="php.debugger.XDebug" />
+      <interpreter id="df1ce4cc-8540-457c-84b2-e39fd29d0290" name="PHP" home="/usr/local/bin/php" debugger_id="php.debugger.XDebug" debugger_extension="/usr/local/Cellar/php/7.3.7/pecl/20180731/xdebug.so">
+        <configuration_options>
+          <configuration_option name="xdebug.remote_enable" value="1" />
+          <configuration_option name="xdebug.remote_port" value="9090" />
+        </configuration_options>
+      </interpreter>
     </interpreters>
   </component>
   <component name="PhpInterpretersPhpInfoCache">
@@ -19,7 +24,11 @@
           <configuration_options>
             <configuration_option name="include_path" value=".:/usr/local/Cellar/php/7.3.7/share/php/pear" />
           </configuration_options>
-          <debuggers />
+          <debuggers>
+            <debugger_info debugger="xdebug" debugger_version="2.7.2">
+              <debug_extensions />
+            </debugger_info>
+          </debuggers>
           <loaded_extensions>
             <extension name="Core" />
             <extension name="PDO" />
@@ -79,6 +88,7 @@
             <extension name="tidy" />
             <extension name="tokenizer" />
             <extension name="wddx" />
+            <extension name="xdebug" />
             <extension name="xml" />
             <extension name="xmlreader" />
             <extension name="xmlrpc" />
